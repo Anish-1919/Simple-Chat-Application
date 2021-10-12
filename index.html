@@ -1,0 +1,60 @@
+<!-- Title:Chat room Application -->
+<!-- Authors:Anish and Saravanan -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <script src="./nodeServer/node_modules/socket.io/client-dist/socket.io.js"></script>
+        <script src="./js/client.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+        <!-- Begin emoji-picker Stylesheets -->
+     <link href="../lib/css/emoji.css" rel="stylesheet"> 
+     <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body onload = "script()">
+        <img class="logo" src="chat.png" alt="logo">
+        <h1>Welcome to chat app</h1>
+        <div class="container"></div>
+        <div class="send">
+            <form action="#" id="send-container" >
+                <!-- Trigger the modal with a button -->
+            <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="text-left">
+                    <p class=" emoji-picker-container">
+                       <input type="text" class="form-control" name="messageInp" id="messageInp" data-emojiable="true">  
+                    </p>
+                  </div>
+                </div>
+                <input class="btn1" type="submit" value="send">
+            </div>
+            </form>
+        </div>
+        </script>
+    <!-- Begin emoji-picker JavaScript -->
+    <script src="../lib/js/config.js"></script>
+    <script src="../lib/js/util.js"></script>
+    <script src="../lib/js/jquery.emojiarea.js"></script>
+    <script src="../lib/js/emoji-picker.js"></script>
+    <!-- End emoji-picker JavaScript -->
+
+    <script>
+      $(function() {
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiable=true]',
+          assetsPath: '../lib/img/',
+          popupButtonClasses: 'fa fa-smile-o'
+        });
+        window.emojiPicker.discover();
+      });
+     
+    </script>
+    </body>
+</html>
